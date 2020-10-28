@@ -132,7 +132,7 @@ parsePuzzles lines =
     in sudoku : parsePuzzles rest
 
 main = do
-    input <- readFile "sudoku.txt"
+    input <- readFile "sudoku17.txt"
     let puzzles = parsePuzzles (lines input)
         solved = map solve puzzles
         toSolution Nothing = "no solution\n"
